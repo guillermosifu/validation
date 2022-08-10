@@ -1,3 +1,7 @@
+
+
+
+
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
 
@@ -46,8 +50,10 @@ signInForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = signInForm["login-email"].value;
   const password = signInForm["login-password"].value;
+ 
 
-  // Authenticate the User
+
+  // // Authenticate the User
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     // clear the form
     signInForm.reset();
@@ -55,6 +61,7 @@ signInForm.addEventListener("submit", (e) => {
     $("#signinModal").modal("hide");
   });
 });
+
 
 // Posts
 const postList = document.querySelector(".posts");

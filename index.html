@@ -21,13 +21,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Signin</a>
+            <a class="nav-link" href="#"data-bs-toggle="modal" data-bs-target="#signinModal" >Signin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="#" id="logout">Logout</a>
           </li>    
         </ul>       
       </div>
@@ -39,7 +39,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -51,13 +51,40 @@
             <input type="password" id="signup-password" class="form-control" placeholder="password" required>
            </div>
          
-           <button type="submit" class="btn btn-primary">Signup</button>
+           <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
       </div>
      
     </div>
   </div>
 </div>
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Signin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form">
+          <div class="form group mb-4">
+           <input type="email" id="login-email" class="form-control" placeholder="email" required>
+          </div>
+          <div class="form group mb-4">
+            <input type="password" id="login-password" class="form-control" placeholder="password" required>
+           </div>  
+           <div class="d-grid gap-2">      
+           <button type="submit" class="btn btn-secondary btn-block">Login</button>
+           <button type="button" class="btn btn-info btn-block" id="googleLogin">Login with Google</button>
+           <button type="button" class="btn btn-primary btn-block" id="facebookLogin">Login with Facebook</button>
+           </div> 
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
 
  
   <!-- SCRIPTS -->
